@@ -33,6 +33,6 @@ print(sigmoid_list([0,1,2])) # PRECISION에 대한 체크는 하지 않겠음.
 
 
 # 1-3) ploting
-x_list = np.arange(-10, 10, 0.01)  # 구간 설정
+x_list = np.arange(-10, 10.01, 0.01)  # 구간 설정
 plt.plot(x_list, sigmoid_list(x_list))  # plot 그리기
 plt.show()

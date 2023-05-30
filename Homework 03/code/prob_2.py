@@ -90,6 +90,7 @@ for i in range(epoch):
     w[1] -= mu * delta_x2
     b    -= mu * delta_b
 
+# 2-5) 최종 학습이 완료된 w, b를 이용하여 학습된 분류기 및 학습 데이터들을 시각화 하라
 # 확인
 print(f"파라미터 w1 : {w[0]}, w2 : {w[1]}, b : {b}")
 visualize(df,w,b) 

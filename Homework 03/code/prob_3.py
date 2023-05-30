@@ -167,10 +167,16 @@ for i in range(4):
 all_hybreid_3 = hybridization(generation_2) # 교배
 generation_3 = select(all_hybreid_3, x1, x2, x3, target, 100, False)  # 가장 좋은순서대로 100개의 유전자 선택
 
-print("앞으로 4번의 창이 나옵니다. 해당 plot은 2세대 rank1 ~ 4를 나타냅니다.")
+print("앞으로 4번의 창이 나옵니다. 해당 plot은 3세대 rank1 ~ 4를 나타냅니다.")
 # fitness 지표 출력
 print(select(all_hybreid_3, x1, x2, x3, target, 4))
 
 # 그래프 출력
 for i in range(4):
     plot_3d(np_data, select(generation_3, x1, x2, x3, target, 4, False)[i])
+
+# 1-5) 최종적으로 유전 알고리즘을 통해 얻어진 유전자 중 가장 Fitness가 높은 유전자에 대해 분류 평면을 도식화 하라.
+# 또한 어떤 조건으로 유전 알고리즘을 종료하였는지 작성하라.
+print("유전 알고리즘은 3세대에서 종료, 다음은 최 상위 모델 파라미터에 대한 분류 결과입니다.")
+print(select(generation_3, x1, x2, x3, target, 1))
+plot_3d(np_data, select(generation_3, x1, x2, x3, target, 1, False)[0])
